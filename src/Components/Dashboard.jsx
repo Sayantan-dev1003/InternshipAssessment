@@ -5,40 +5,43 @@ const Dashboard = () => {
     const [classLevel, setClassLevel] = useState("");
     return (
         <>
-            <div className="flex-1 p-6">
+            <div className="flex-1 p-6 bg-white mx-5 my-2 rounded-xl">
                 <div className="flex justify-between mb-4">
-                    <select
-                        value={year}
-                        onChange={(e) => setYear(e.target.value)}
-                        className="border rounded-md p-2"
-                    >
-                        <option value="">Select Annual Year</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                    </select>
-                    <select
-                        value={classLevel}
-                        onChange={(e) => setClassLevel(e.target.value)}
-                        className="border rounded-md p-2"
-                    >
-                        <option value="">Select Class</option>
-                        <option value="UKG">UKG</option>
-                        <option value="1">Class 1</option>
-                        <option value="2">Class 2</option>
-                        <option value="3">Class 3</option>
-                        <option value="4">Class 4</option>
-                        <option value="5">Class 5</option>
-                        <option value="6">Class 6</option>
-                        <option value="7">Class 7</option>
-                        <option value="8">Class 8</option>
-                        <option value="9">Class 9</option>
-                        <option value="10">Class 10</option>
-                        <option value="11">Class 11</option>
-                        <option value="12">Class 12</option>
-                    </select>
-                    <button className="bg-blue-500 text-white rounded-md px-4 py-2">
-                        Add New Student
+                    <div className="flex gap-2">
+                        <select
+                            value={year}
+                            onChange={(e) => setYear(e.target.value)}
+                            className="rounded-md py-2 px-3 outline-none bg-slate-200 text-slate-600 font-bold notoSans"
+                        >
+                            <option value="2024">AY 2024-25</option>
+                            <option value="2023">AY 2023-23</option>
+                            <option value="2022">AY 2022-23</option>
+                            <option value="2021">AY 2021-22</option>
+                            <option value="2020">AY 2020-21</option>
+                        </select>
+                        <select
+                            value={classLevel}
+                            onChange={(e) => setClassLevel(e.target.value)}
+                            className="rounded-md py-2 px-2 outline-none bg-slate-200 text-slate-600 font-bold notoSans"
+                        >
+                            <option value="12">CBSE 12</option>
+                            <option value="11">CBSE 11</option>
+                            <option value="10">CBSE 10</option>
+                            <option value="9">CBSE 9</option>
+                            <option value="8">CBSE 8</option>
+                            <option value="7">CBSE 7</option>
+                            <option value="6">CBSE 6</option>
+                            <option value="5">CBSE 5</option>
+                            <option value="4">CBSE 4</option>
+                            <option value="3">CBSE 3</option>
+                            <option value="2">CBSE 2</option>
+                            <option value="1">CBSE 1</option>
+                            <option value="UKG">CBSE UKG</option>
+                            <option value="LKG">CBSE LKG</option>
+                        </select>
+                    </div>
+                    <button className="rounded-md py-2 px-2 outline-none bg-slate-200 text-slate-600 font-bold notoSans">
+                        <span className="w-5 h-5">+</span>&nbsp;Add New Student
                     </button>
                 </div>
                 <table className="min-w-full bg-white border border-gray-200">
